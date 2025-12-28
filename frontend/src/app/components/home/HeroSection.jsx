@@ -143,9 +143,7 @@ export default function HeroSection() {
                         </div>
                         <MoreHorizontal size={14} className="text-gray-500" />
                     </div>
-                    <div className="absolute -right-8 top-1/2 -translate-y-1/2 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg z-30 flex items-center gap-1 animate-pulse">
-                        <div className="w-0 h-0 border-t-[4px] border-t-transparent border-r-[6px] border-r-white border-b-[4px] border-b-transparent"></div> Kohaku
-                    </div>
+                  
                   </div>
                   <TaskItem text="Bento Cards: UI Components" />
                   <div className="flex items-center justify-between p-3 opacity-50">
