@@ -6,6 +6,7 @@ const { sendOTP } = require("../config/email");
 
 // Helper function to generate access and refresh tokens
 const generateTokens = (user) => {
+  // 
   // Short-lived access token (15 minutes)
   const accessToken = jwt.sign(
     { id: user._id, email: user.email },
@@ -24,6 +25,7 @@ class AuthController {
   // User Registration
   async register(req, res) {
     try {
+      // 
       const { firstName, lastName, email, password } = req.body;
 
       // Validation
@@ -115,6 +117,7 @@ class AuthController {
   // User Login
   async login(req, res) {
     try {
+      // 
       const { email, password } = req.body;
 
       // Validation
@@ -338,6 +341,7 @@ class AuthController {
 
   async refreshToken(req, res) {
     try {
+      // 
       // Refresh token is now verified by middleware from HTTP-only cookie
       const user = req.user;
       const oldRefreshToken = req.refreshToken;
@@ -424,6 +428,7 @@ class AuthController {
   // Send Forgot Password OTP
   async sendForgotPasswordOTP(req, res) {
     try {
+      // 
       const { email } = req.body;
 
       if (!email) {
