@@ -14,7 +14,7 @@ const PORT = process.env.PORT;
 // Middleware
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL || "http://localhost:3000", "http://localhost:3001"],
+    origin: [process.env.CLIENT_URL || "http://localhost:3000", "https://tick-track-liard.vercel.app"],
     credentials: true,
   })
 );
