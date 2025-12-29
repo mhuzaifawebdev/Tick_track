@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { AuthLayout } from "../../components/layout/AuthLayout";
 import VerifyOtp from "../../components/authentication/verifyOtp";
 
@@ -7,7 +8,9 @@ export default function VerifyOtpPage() {
       title="Verify your email"
       subtitle="Enter the code we sent to your email"
     >
-      <VerifyOtp />
+      <Suspense fallback={<div>Loading...</div>}>
+        <VerifyOtp />
+      </Suspense>
     </AuthLayout>
   );
 }
